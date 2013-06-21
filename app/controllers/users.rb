@@ -26,23 +26,3 @@ post '/login' do
     redirect '/login'
   end
 end
-
-
-
-# class User < ActiveRecord::Base
-
-#   validates :username, :presence => :true
-#   validates :password, :presence => :true, :length => { :minimum => 3 }
-
-
-#   def self.create_user(user)
-#     User.create(username: user[:username],
-#                 password: BCrypt::Password.create(user[:password]))
-#   end
-
-#   def self.authenticate(params)
-#     if user = User.find_by_username(username)
-#       return user if BCrypt::Password.new(user.password) == params[:password]
-#     end
-#   end
-# end

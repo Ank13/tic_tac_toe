@@ -1,7 +1,10 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  
+  $(function() {
+    var pusher = new Pusher('e8019d4e37ae401f9ea2');
+    var channel = pusher.subscribe('my_notifications');
+    var notifier = new PusherNotifier(channel);
+  });
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+
 });

@@ -7,6 +7,7 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 # Require gems we care about
 require 'rubygems'
+require 'pusher'
 
 require 'uri'
 require 'pathname'
@@ -31,3 +32,8 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
+
+# Set up the Pusher keys...secure these pre-deployment
+Pusher.app_id = '47138'
+Pusher.key = 'e8019d4e37ae401f9ea2'
+Pusher.secret = 'cdd9534c78325520d891'

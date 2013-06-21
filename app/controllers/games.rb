@@ -1,0 +1,5 @@
+get '/newgame' do
+
+
+end
+
